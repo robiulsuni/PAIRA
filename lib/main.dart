@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import './home_page.dart';
-import 'screen/sign_in_page.dart';
-import 'screen/sign_up_page.dart';
+import './screen/sign_in_page.dart';
+import './screen/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(primarySwatch: Colors.green),
-      initialRoute: '/sign_in_page',
+      initialRoute: '/SigninPage',
       routes: <String, WidgetBuilder>{
         "/home_page": (context) => HomePage(),
         "/sign_in_page": (context) => SigninPage(),

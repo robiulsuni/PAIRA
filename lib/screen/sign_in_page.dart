@@ -1,10 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class SigninPage extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
+  void main() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,10 +37,10 @@ class SigninPage extends StatelessWidget {
           ),
           TextField(
             controller: passwordController,
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.number,
             autofocus: false,
             obscureText: true,
-            decoration: InputDecoration(            
+            decoration: InputDecoration(
               hintText: 'Password',
               labelText: 'Password',
               contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -45,21 +51,23 @@ class SigninPage extends StatelessWidget {
           SizedBox(
             height: 15.0,
           ),
-          ElevatedButton(onPressed: ()async {
-             print(emailController.text);
-                  print(passwordController.text);
-                  try {
-                    final user = await auth.signInWithEmailAndPassword(
-                        email: emailController.text.toString(),
-                        password: passwordController.text.toString().trim());
-                    if (user != null) {
-                      print(user);
-                      Navigator.pushNamed(context, '/');
-                    }
-                  } on FirebaseAuthException catch (e) {
-                    print(e.code);
+          ElevatedButton(
+              onPressed: () async {
+                print(emailController.text);
+                print(passwordController.text);
+                try {
+                  final user = await auth.signInWithEmailAndPassword(
+                      email: emailController.text.toString(),
+                      password: passwordController.text.toString().trim());
+                  if (user != null) {
+                    print(user);
+                    Navigator.pushNamed(context, '/HomePage');
                   }
-          }, child: Text('Signin')),
+                } on FirebaseAuthException catch (e) {
+                  print(e.code);
+                }
+              },
+              child: Text('Log In')),
           SizedBox(
             height: 20,
           ),
@@ -69,7 +77,7 @@ class SigninPage extends StatelessWidget {
               Text("Do not have an account?"),
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/signup');
+                  Navigator.pushNamed(context, '/SignupPage');
                 },
                 child: Text(
                   "Sign Up",
@@ -77,7 +85,7 @@ class SigninPage extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
