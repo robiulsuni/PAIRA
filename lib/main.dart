@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(primarySwatch: Colors.green),
-      initialRoute: '/home_page',
+      initialRoute: '/sign_in_page',
       routes: <String, WidgetBuilder>{
         "/home_page": (context) => HomePage(),
         "/sign_in_page": (context) => SigninPage(),
