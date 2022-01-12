@@ -6,5 +6,4 @@ class MainActivity: FlutterActivity() {
     plugins {
   kotlin("<...>") version "1.6.10"
 }
-    
 }
