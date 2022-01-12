@@ -15,11 +15,15 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                color: Colors.green,
-                width: MediaQuery.of(context).size.width * .42,
-                height: 200.0,
-                child: Text('HomePages'),
+              Row(
+                children: [
+                  Container(
+                    color: Colors.green,
+                    width: MediaQuery.of(context).size.width * .42,
+                    height: 200.0,
+                    child: Text('HomePages'),
+                  ),
+                ],
               ),
             ],
           ),
