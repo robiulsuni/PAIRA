@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.green,
                     width: MediaQuery.of(context).size.width * .42,
                     height: 200.0,
-                    child: Text('HomePages'),
+                    child: Text('HomePagess'),
                   ),
                 ],
               ),
