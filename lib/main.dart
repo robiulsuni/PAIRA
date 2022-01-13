@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.green),
       initialRoute: '/SigninPage',
       routes: <String, WidgetBuilder>{
-        "/home_page": (context) => HomePage(),
-        "/sign_in_page": (context) => SigninPage(),
-        "/sign_up_page": (context) => SignupPage(),
+        "/SigninPage": (context) => SigninPage(),
+        "/SignupPage": (context) => SignupPage(),
+        "/HomePage": (context) => HomePage(),
       },
     );
   }
