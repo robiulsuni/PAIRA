@@ -4,108 +4,31 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-        appBar: AppBar(
-          title: Text('Home Page'),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    color: Colors.green,
-                    width: MediaQuery.of(context).size.width * .42,
-                    height: 200.0,
-                    child: Text('HomePagess'),
-=======
-      backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
-        title: Text('HomePage'),
+        title: Text('Home Page'),
+        centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Column(  
+      body: Center(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 10.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
-                    onTab: () {},
-                  ),
-                ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {},
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
-                    onTab: () {},
-                  ),
-                ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {},
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
-                    onTab: () {},
->>>>>>> bcd5fe978fb9e45b332defe8a1d1db5d743b3589
-                  ),
-                ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {},
-                  ),
-                ),
-              ],
+            Row(children: [
+              Container(
+                color: Colors.green,
+                width: MediaQuery.of(context).size.width * .42,
+                height: 200.0,
+                child: Text('HomePagess'),
+              ),
+            ]),
+            Expanded(
+              child: _customButton(
+                context: context,
+                name: 'Department',
+                color: Colors.blueGrey.shade400,
+                iconData: Icons.account_balance_wallet,
+                onTab: () {},
+              ),
             ),
           ],
         ),
