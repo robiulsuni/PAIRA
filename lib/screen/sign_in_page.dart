@@ -6,6 +6,7 @@ class SigninPage extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
+  
 
   @override
   Widget build(BuildContext context) {

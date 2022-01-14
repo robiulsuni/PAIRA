@@ -13,6 +13,13 @@ await Firebase.initializeApp();
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  FirebaseOptions get firebaseOptions => const FirebaseOptions(
+        appId: '1:731783212291:android:51226d59451f5fd7658d36',
+        apiKey: 'AIzaSyDCqvw7EfT5ZW0DEj6_UYitNxUU9qtfYrs',
+        projectId: 'local-project-a15cb',
+        messagingSenderId: '448618578101',
+      );
+
 
 
   @override
