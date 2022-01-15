@@ -1,34 +1,96 @@
 import 'package:flutter/material.dart';
+import './global_widget/my_drware.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: MyDrawer(),
+      backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
-        title: Text('Home Page'),
-        centerTitle: true,
+        title: Text('HomePage'),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Row(children: [
-              Container(
-                color: Colors.green,
-                width: MediaQuery.of(context).size.width * .42,
-                height: 200.0,
-                child: Text('HomePagess'),
-              ),
-            ]),
-            Expanded(
-              child: _customButton(
-                context: context,
-                name: 'Department',
-                color: Colors.blueGrey.shade400,
-                iconData: Icons.account_balance_wallet,
-                onTab: () {},
-              ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: _customButton(
+                    context: context,
+                    name: 'Department',
+                    color: Colors.amber.shade400,
+                    iconData: Icons.departure_board,
+                    onTab: () {
+                      Navigator.pushNamed(context, '/DepartmentView');
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: _customButton(
+                    context: context,
+                    name: 'Department',
+                    color: Colors.blueGrey.shade400,
+                    iconData: Icons.account_balance_wallet,
+                    onTab: () {},
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: _customButton(
+                    context: context,
+                    name: 'Department',
+                    color: Colors.amber.shade400,
+                    iconData: Icons.departure_board,
+                    onTab: () {},
+                  ),
+                ),
+                Expanded(
+                  child: _customButton(
+                    context: context,
+                    name: 'Department',
+                    color: Colors.blueGrey.shade400,
+                    iconData: Icons.account_balance_wallet,
+                    onTab: () {},
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: _customButton(
+                    context: context,
+                    name: 'Department',
+                    color: Colors.amber.shade400,
+                    iconData: Icons.departure_board,
+                    onTab: () {},
+                  ),
+                ),
+                Expanded(
+                  child: _customButton(
+                    context: context,
+                    name: 'Department',
+                    color: Colors.blueGrey.shade400,
+                    iconData: Icons.account_balance_wallet,
+                    onTab: () {},
+                  ),
+                ),
+              ],
             ),
           ],
         ),
