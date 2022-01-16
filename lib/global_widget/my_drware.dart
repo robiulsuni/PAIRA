@@ -4,11 +4,11 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.white,
       child: Wrap(
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(color: Colors.green.shade300),
+            decoration: BoxDecoration(color: Colors.greenAccent.shade400),
             child: Container(
               width: MediaQuery.of(context).size.width,
               child: Icon(Icons.verified_user_sharp),

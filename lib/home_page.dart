@@ -6,9 +6,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: MyDrawer(),
-      backgroundColor: Colors.grey.shade400,
+      backgroundColor: Colors.white70,
       appBar: AppBar(
         title: Text('HomePage'),
+        backgroundColor: Colors.greenAccent.shade400,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -25,9 +26,9 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
+                    name: 'Computer Technology',
+                    color: Colors.greenAccent.shade400,
+                    iconData: Icons.computer,
                     onTab: () {
                       Navigator.pushNamed(context, '/DepartmentView');
                     },
@@ -36,9 +37,9 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
+                    name: 'Architecture & Interior Design Technology',
+                    color: Colors.greenAccent.shade400,
+                    iconData: Icons.architecture,
                     onTab: () {},
                   ),
                 ),
@@ -51,42 +52,18 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
+                    name: 'Electromedial Technology',
+                    color: Colors.greenAccent.shade400,
+                    iconData: Icons.electrical_services,
                     onTab: () {},
                   ),
                 ),
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Department',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
-                    onTab: () {},
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.amber.shade400,
-                    iconData: Icons.departure_board,
-                    onTab: () {},
-                  ),
-                ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Department',
-                    color: Colors.blueGrey.shade400,
-                    iconData: Icons.account_balance_wallet,
+                    name: 'Refrigeration & Air-conditioning Technology',
+                    color: Colors.greenAccent.shade400,
+                    iconData: Icons.ac_unit,
                     onTab: () {},
                   ),
                 ),

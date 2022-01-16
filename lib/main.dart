@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import './home_page.dart';
 import './screen/sign_in_page.dart';
 import './screen/sign_up_page.dart';
+import 'models/department_details_model.dart';
 import 'screen/department.dart';
+import 'screen/department_details.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
@@ -21,7 +23,6 @@ class MyApp extends StatelessWidget {
         messagingSenderId: '448618578101',
       );
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         "/SignupPage": (context) => SignupPage(),
         "/HomePage": (context) => HomePage(),
         "/DepartmentView": (context) => DepartmentView(),
+        "/DepartmentDetails": (context) => DepartmentDetails(),
       },
     );
   }

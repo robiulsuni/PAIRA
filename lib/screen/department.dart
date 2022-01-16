@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:paira/global_widget/my_drware.dart';
+import 'package:paira/models/department_details_model.dart';
 import 'package:paira/models/department_models.dart';
 
 class DepartmentView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Department> deptList = [
-      Department(id: 1, name: 'CSE', img: ''),
-      Department(id: 2, name: 'Math', img: ''),
+      Department(
+        id: 1,
+        name: 'CSE',
+        img: '',
+        deptDetils: DepartmentDetailsModel(
+            id: 1, name: 'bng', title: 'Bangla one', dec: 'in sfsf', img: ''),
+      ),
+      Department(
+        id: 2,
+        name: 'Math',
+        img: '',
+        deptDetils: DepartmentDetailsModel(
+            id: 1, name: 'eng', title: 'english one', dec: 'in sfsf', img: ''),
+      ),
       Department(id: 3, name: 'Bangla', img: ''),
       Department(id: 4, name: 'English', img: ''),
       Department(id: 5, name: 'Marketing', img: ''),
@@ -25,7 +38,17 @@ class DepartmentView extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 150.0, vertical: 10.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  if (deptList.elementAt(index).id == 1) {
+                    Department bngDept = deptList[0];
+                    Navigator.pushNamed(context, '/DepartmentDetails',
+                        arguments: bngDept);
+                  } else if (deptList.elementAt(index).id == 2) {
+                    Department bngDept = deptList[1];
+                    Navigator.pushNamed(context, '/DepartmentDetails',
+                        arguments: bngDept);
+                  }
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                 ),
