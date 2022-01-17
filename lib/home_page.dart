@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paira/constants/app_constants.dart';
 import './global_widget/my_drware.dart';
 
 class HomePage extends StatelessWidget {
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.greenAccent.shade400,
                     iconData: Icons.computer,
                     onTab: () {
-                      Navigator.pushNamed(context, '/DepartmentView');
+                      Navigator.pushNamed(context, AppConstant.deptView);
                     },
                   ),
                 ),

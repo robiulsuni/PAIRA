@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paira/constants/app_constants.dart';
 import 'package:paira/global_widget/my_drware.dart';
 import 'package:paira/models/department_details_model.dart';
 import 'package:paira/models/department_models.dart';
@@ -41,16 +42,16 @@ class DepartmentView extends StatelessWidget {
                 onPressed: () {
                   if (deptList.elementAt(index).id == 1) {
                     Department bngDept = deptList[0];
-                    Navigator.pushNamed(context, '/DepartmentDetails',
+                    Navigator.pushNamed(context, AppConstant.deptDetailPage,
                         arguments: bngDept);
                   } else if (deptList.elementAt(index).id == 2) {
                     Department bngDept = deptList[1];
-                    Navigator.pushNamed(context, '/DepartmentDetails',
+                    Navigator.pushNamed(context, AppConstant.deptDetailPage,
                         arguments: bngDept);
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
+                  primary: Colors.green,
                 ),
                 child: Text(
                   '${deptList.elementAt(index).name}',

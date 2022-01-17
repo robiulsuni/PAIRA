@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:paira/config/routes.dart';
 import './home_page.dart';
 import './screen/sign_in_page.dart';
 import './screen/sign_up_page.dart';
@@ -29,14 +30,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(primarySwatch: Colors.green),
-      initialRoute: '/HomePage',
-      routes: <String, WidgetBuilder>{
-        "/SigninPage": (context) => SigninPage(),
-        "/SignupPage": (context) => SignupPage(),
-        "/HomePage": (context) => HomePage(),
-        "/DepartmentView": (context) => DepartmentView(),
-        "/DepartmentDetails": (context) => DepartmentDetails(),
-      },
+      initialRoute: AppRoutes.myInitRoute,
+      routes: AppRoutes.routes,
     );
   }
 }

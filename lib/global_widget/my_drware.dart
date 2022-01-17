@@ -20,8 +20,23 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
+            leading: Icon(Icons.admin_panel_settings),
+            title: Text('Administration'),
+            onTap: () {},
+          ),
+          ListTile(
             leading: Icon(Icons.details),
-            title: Text('Details'),
+            title: Text('About Us'),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.download),
+            title: Text('Downloads'),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit_rounded),
+            title: Text('Technology'),
             onTap: () {},
           ),
         ],

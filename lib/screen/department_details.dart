@@ -13,7 +13,9 @@ class DepartmentDetails extends StatelessWidget {
         child: Column(
           children: [
             Text('${arg.name}'),
+            SizedBox(height: 10.0),
             Text('${arg.deptDetils!.title}'),
+            SizedBox(height: 10.0),
             Text('${arg.deptDetils!.dec}'),
           ],
         ),
