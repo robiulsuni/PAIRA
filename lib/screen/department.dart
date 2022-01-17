@@ -10,9 +10,13 @@ class DepartmentView extends StatelessWidget {
       Department(
         id: 1,
         name: 'CSE',
-        img: '',
+        img: 'assets/images/apple.jpg',
         deptDetils: DepartmentDetailsModel(
-            id: 1, name: 'bng', title: 'Bangla one', dec: 'in sfsf', img: ''),
+            id: 1,
+            name: 'bng',
+            title: 'Bangla one',
+            dec: 'in sfsf',
+            img: 'assets/images/apple.jpg'),
       ),
       Department(
         id: 2,
