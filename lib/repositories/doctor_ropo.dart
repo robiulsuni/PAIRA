@@ -5,7 +5,8 @@ import 'package:paira/models/doctor_model.dart';
 
 class DoctorRepo {
   static Future<List<DoctorModel>> getDoctorList() async {
-    final respose = await rootBundle.loadString('assets/json/doctor_list.json');
+    final respose =
+        await rootBundle.loadString('assets/json/teacher_list.json');
     if (respose != null) {
       List<dynamic> doctors = await json.decode(respose);
       List<DoctorModel> doctorList =
