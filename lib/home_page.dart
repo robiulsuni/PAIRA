@@ -41,7 +41,9 @@ class HomePage extends StatelessWidget {
                     name: 'Architecture & Interior Design Technology',
                     color: Colors.greenAccent.shade400,
                     iconData: Icons.architecture,
-                    onTab: () {},
+                    onTab: () {
+                      Navigator.pushNamed(context, AppConstant.doctorPage);
+                    },
                   ),
                 ),
               ],
