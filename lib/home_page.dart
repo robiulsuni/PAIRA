@@ -55,10 +55,12 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: _customButton(
                     context: context,
-                    name: 'Electromedial Technology',
+                    name: 'Teacher Details',
                     color: Colors.greenAccent.shade400,
                     iconData: Icons.electrical_services,
-                    onTab: () {},
+                    onTab: () {
+                      Navigator.pushNamed(context, AppConstant.teacherPage);
+                    },
                   ),
                 ),
                 Expanded(

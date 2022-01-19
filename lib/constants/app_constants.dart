@@ -5,4 +5,5 @@ class AppConstant {
   static const doctorPage = '/doctor';
   static const deptView = '/DepartmentView';
   static const deptDetailPage = '/DepartmentDetails';
+  static const teacherPage = '/tec';
 }

@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Engr. Md. Abul Kalam Azad",
+        "des": "Principal (in Charge)",
+        "dept": "Agricultural Engineering",
+        "edu" : "B.Sc in CSE (DUET)",
+        "img": "https://www.bbpi.gov.bd/images/teacherstaff/Abul-Kalam-Azad.jpg",
+        "fb_link":"",
+        "tw_link":"",
+        "gl_link": "",
+        "in_link":""
+
+    },
+    {
+        "id": 2,
+        "name": "Engr. Mohammad Selim",
+        "des": "Instructor (Tech) & Head of the Department",
+        "dept": "Computer Technology",
+        "edu" : "M.Sc in Food Technology",
+        "img": "https://www.bbpi.gov.bd/images/teacherstaff/Mohammed-Selim.jpg",
+        "fb_link":"",
+        "tw_link":"",
+        "gl_link": "",
+        "in_link":""  
+    }
+]

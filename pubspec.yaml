@@ -63,6 +63,7 @@ flutter:
   assets:
     - assets/images/apple.jpg
     - assets/json/teacher_list.json
+    - assets/json/teacher_list_data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
