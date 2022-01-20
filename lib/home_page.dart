@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:paira/constants/app_constants.dart';
 import './global_widget/my_drware.dart';
@@ -13,68 +15,81 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.greenAccent.shade400,
       ),
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 10.0,
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: double.maxFinite,
+          child: Stack(fit: StackFit.expand, children: [
+            ImageFiltered(
+              imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 4),
+              child: Image.asset(
+                'assets/images/background.jpg',
+                fit: BoxFit.cover,
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Computer Technology',
-                    color: Colors.greenAccent.shade400,
-                    iconData: Icons.computer,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.deptView);
-                    },
-                  ),
+                SizedBox(
+                  height: 10.0,
                 ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Architecture & Interior Design Technology',
-                    color: Colors.greenAccent.shade400,
-                    iconData: Icons.architecture,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.doctorPage);
-                    },
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Computer Technology',
+                        color: Colors.greenAccent.shade400,
+                        iconData: Icons.computer,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.deptView);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Architecture & Interior Design Technology',
+                        color: Colors.greenAccent.shade400,
+                        iconData: Icons.architecture,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.doctorPage);
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Teacher Details',
+                        color: Colors.greenAccent.shade400,
+                        iconData: Icons.electrical_services,
+                        onTab: () {
+                          Navigator.pushNamed(context, AppConstant.teacherPage);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: _customButton(
+                        context: context,
+                        name: 'Refrigeration & Air-conditioning Technology',
+                        color: Colors.greenAccent.shade400,
+                        iconData: Icons.ac_unit,
+                        onTab: () {},
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Teacher Details',
-                    color: Colors.greenAccent.shade400,
-                    iconData: Icons.electrical_services,
-                    onTab: () {
-                      Navigator.pushNamed(context, AppConstant.teacherPage);
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: _customButton(
-                    context: context,
-                    name: 'Refrigeration & Air-conditioning Technology',
-                    color: Colors.greenAccent.shade400,
-                    iconData: Icons.ac_unit,
-                    onTab: () {},
-                  ),
-                ),
-              ],
-            ),
-          ],
+          ]),
         ),
       ),
     );
