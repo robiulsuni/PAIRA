@@ -22,9 +22,9 @@ class HomePage extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               ImageFiltered(
-                imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 4),
+                imageFilter: ImageFilter.blur(sigmaX: 2.50, sigmaY: 2.50),
                 child: Image.asset(
-                  'assets/images/background.jpg',
+                  'assets/images/download.jpg',
                   fit: BoxFit.fill,
                 ),
               ),
